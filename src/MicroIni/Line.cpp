@@ -19,7 +19,7 @@ bool Line::isComment() const
 
 bool Line::isProperty() const
 {
-    return (not isBlank()) and (not isComment());
+    return (!isBlank()) && (!isComment());
 }
 
 const std::string& Line::getName() const
