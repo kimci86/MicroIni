@@ -4,7 +4,7 @@ namespace MicroIni
 {
 
 Section::Section(const std::string& name, const Properties& properties)
- : pair(name, properties)
+ : std::pair<std::string, Properties>(name, properties)
 {}
 
 const std::string& Section::getName() const
