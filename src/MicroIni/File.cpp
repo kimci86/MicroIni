@@ -92,10 +92,10 @@ void File::parseLine(std::string line)
     if(string.empty()) // blank line
         back().getProperties().push_back(Blank());
 
-    else if(string[0] == ';' or string[0] == '#') // comment
+    else if(string[0] == ';' || string[0] == '#') // comment
         back().getProperties().push_back(Comment(line));
 
-    else if(string[0] == '[' and (pos = string.find(']')) != std::string::npos) // section
+    else if(string[0] == '[' && (pos = string.find(']')) != std::string::npos) // section
         push_back(Section(trim(string.substr(1, pos - 1))));
 
     else if((pos = string.find_first_of("=:")) != std::string::npos) // property

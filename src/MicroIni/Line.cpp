@@ -4,7 +4,7 @@ namespace MicroIni
 {
 
 Line::Line(const std::string& name, const Value& value)
- : pair(name, value)
+ : std::pair<std::string, Value>(name, value)
 {}
 
 bool Line::isBlank() const
@@ -19,7 +19,7 @@ bool Line::isComment() const
 
 bool Line::isProperty() const
 {
-    return (not isBlank()) and (not isComment());
+    return (!isBlank()) && (!isComment());
 }
 
 const std::string& Line::getName() const
