@@ -47,7 +47,7 @@ void File::write(std::ostream& stream, const std::string& delimiter) const
     const_iterator i = begin();
     if(i->getName().empty()) // if the first section is the anonymous section
         goto writeProperties; // do not write its name
-    
+
     while(++i != end()) // for each section
     {
         // write section's name

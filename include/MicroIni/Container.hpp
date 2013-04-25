@@ -23,7 +23,7 @@ class MICROINI_API Container : public std::vector<pair>
 
         /// Test whether the nth element (0-based) with a certain key exists.
         bool has(const Key& key, unsigned int n = 0) const;
-        
+
         /// \brief Access the nth element (0-based) with a certain key.
         ///
         /// The element is created if it does not exists.

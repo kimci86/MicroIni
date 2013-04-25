@@ -28,7 +28,7 @@ int main()
 
     // Add a comment
     file["numbers"].push_back(MicroIni::Comment("# this is my comment"));
-    
+
     // Save the file
     if(!file.save("output.ini"))
         return 1;

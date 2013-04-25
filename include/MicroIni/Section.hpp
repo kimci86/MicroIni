@@ -18,7 +18,7 @@ class MICROINI_API Section : public std::pair<std::string, Properties>
 
         /// Set section's name.
         void setName(const std::string& name);
-        
+
         /// Get section's Properties.
         const Properties& getProperties() const;
 
