@@ -34,6 +34,11 @@ class MICROINI_API Container : public std::vector<pair>
         /// \copydetails at
         T& operator[](const Key& key);
 
+        /// \brief Add a new element at the end of the Container.
+        ///
+        /// Equivalent to `push_back`.
+        Container<pair>& operator+=(const pair& element);
+
         using std::vector<pair>::at;
         using std::vector<pair>::operator[];
 

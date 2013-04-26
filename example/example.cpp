@@ -19,7 +19,7 @@ int main()
     file["message"]["hello"] = "Hello you!";
 
     // Add a blank line
-    file["message"].push_back(MicroIni::Blank());
+    file["message"] += MicroIni::Blank();
 
     // Create a section and properties
     // Any type convertible by a std::stringstream is assignable
@@ -27,7 +27,7 @@ int main()
     file["numbers"]["a float"] = 0.8f;
 
     // Add a comment
-    file["numbers"].push_back(MicroIni::Comment("# this is my comment"));
+    file["numbers"] += MicroIni::Comment("# this is my comment");
 
     // Save the file
     if(!file.save("output.ini"))

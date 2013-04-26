@@ -30,3 +30,10 @@ typename Container<pair>::T& Container<pair>::operator[](const Key& key)
 {
     return at(key);
 }
+
+template <typename pair>
+Container<pair>& Container<pair>::operator+=(const pair& element)
+{
+    vector::push_back(element);
+    return *this;
+}
