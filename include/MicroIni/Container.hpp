@@ -26,12 +26,12 @@ class MICROINI_API Container : public std::vector<pair>
 
         /// \brief Access the nth element (0-based) with a certain key.
         ///
-        /// The element is created if it does not exists.
+        /// The element is created if it does not exist.
         T& at(const Key& key, unsigned int n = 0);
 
         /// \brief Access the first element with a certain key.
         ///
-        /// The element is created if it does not exists.
+        /// \copydetails at
         T& operator[](const Key& key);
 
         using std::vector<pair>::at;
