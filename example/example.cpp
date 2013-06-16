@@ -12,6 +12,9 @@ int main()
     // Clear the anonymous section (lines before the first section)
     file[""].clear();
 
+    // Remove the example section
+    file.erase("section");
+
     // Access a property value
     std::cout << file["message"]["hello"] << std::endl;
 
