@@ -17,6 +17,17 @@ typename Container<pair>::iterator Container<pair>::find(const Key& key, unsigne
 }
 
 template <typename pair>
+void Container<pair>::erase(const Key& key)
+{
+    typename Container<pair>::iterator i = Container<pair>::begin();
+    while(i != Container<pair>::end())
+        if(i->first == key)
+            i = erase(i);
+        else
+            ++i;
+}
+
+template <typename pair>
 bool Container<pair>::has(const Key& key, unsigned int n) const
 {
     return find(key, n) != Container<pair>::end();

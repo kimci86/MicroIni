@@ -24,6 +24,9 @@ class MICROINI_API Container : public std::vector<pair>
         /// Look for the nth pair (0-based) with a certain key.
         typename Container<pair>::iterator find(const Key& key, unsigned int n = 0);
 
+        /// Remove pairs with a certain name.
+        void erase(const Key& key);
+
         /// Test whether the nth element (0-based) with a certain key exists.
         bool has(const Key& key, unsigned int n = 0) const;
 
@@ -42,6 +45,7 @@ class MICROINI_API Container : public std::vector<pair>
         /// Equivalent to `push_back`.
         Container<pair>& operator+=(const pair& element);
 
+        using std::vector<pair>::erase;
         using std::vector<pair>::at;
         using std::vector<pair>::operator[];
 
