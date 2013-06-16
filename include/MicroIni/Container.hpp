@@ -18,8 +18,11 @@ class MICROINI_API Container : public std::vector<pair>
         /// Element type.
         typedef typename pair::second_type T;
 
-        /// Look for the nth element (0-based) with a certain key.
-        const T* find(const Key& key, unsigned int n = 0) const;
+        /// Look for the nth pair (0-based) with a certain key.
+        typename Container<pair>::const_iterator find(const Key& key, unsigned int n = 0) const;
+
+        /// Look for the nth pair (0-based) with a certain key.
+        typename Container<pair>::iterator find(const Key& key, unsigned int n = 0);
 
         /// Test whether the nth element (0-based) with a certain key exists.
         bool has(const Key& key, unsigned int n = 0) const;
