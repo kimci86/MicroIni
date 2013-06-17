@@ -48,9 +48,6 @@ class MICROINI_API Container : public std::vector<pair>
         using std::vector<pair>::erase;
         using std::vector<pair>::at;
         using std::vector<pair>::operator[];
-
-    private:
-        typedef std::vector<pair> vector;
 };
 
 #include <MicroIni/Container.inl>
